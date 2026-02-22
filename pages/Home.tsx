@@ -11,7 +11,7 @@ export const Home: React.FC = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-20 px-6 md:px-12 bg-black overflow-hidden">
+      <section className="relative min-h-screen flex items-center pt-20 px-4 sm:px-6 md:px-12 bg-black overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 z-0">
           <NeuralBackground
@@ -28,12 +28,12 @@ export const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto w-full relative z-10">
           <div className="max-w-3xl">
             <FadeIn delay={100}>
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
                 Transforme Ideias em <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Resultados Reais</span>.
               </h1>
             </FadeIn>
             <FadeIn delay={200}>
-              <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl font-light">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl font-light">
                 Especialistas em vídeo, UGC, sites de alta conversão e tráfego pago em Belo Horizonte.
               </p>
             </FadeIn>
@@ -87,7 +87,7 @@ export const Home: React.FC = () => {
       {/* Process Section */}
       <Section id="process">
         <div className="flex flex-col md:flex-row gap-16 items-start">
-          <div className="md:w-1/3 sticky top-32">
+          <div className="md:w-1/3 md:sticky md:top-32">
             <FadeIn>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Como Trabalhamos</h2>
               <p className="text-gray-400 text-lg">
@@ -150,7 +150,7 @@ export const Home: React.FC = () => {
       {/* CTA Section */}
       <Section className="text-center py-32">
         <FadeIn>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Pronto para escalar seu negócio?</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">Pronto para escalar seu negócio?</h2>
           <p className="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
             Agende uma conversa com nossos especialistas e descubra como podemos ajudar.
           </p>

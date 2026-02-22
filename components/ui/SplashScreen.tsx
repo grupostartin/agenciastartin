@@ -42,7 +42,7 @@ export const SplashScreen: React.FC = () => {
                                 transition={{ duration: 0.8, delay: 0.3 }}
                                 className="relative z-10"
                             >
-                                <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white mb-6">
+                                <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter text-white mb-6">
                                     STARTIN<span className="text-brand-gray-text opacity-50">.</span>
                                 </h1>
                             </motion.div>

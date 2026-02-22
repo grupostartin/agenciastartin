@@ -102,7 +102,7 @@ _Enviado via site agenciastartin.com_`;
           {/* Info Side */}
           <div className="lg:w-1/3">
             <FadeIn>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Vamos Conversar?</h1>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">Vamos Conversar?</h1>
               <p className="text-gray-400 mb-12 text-lg">
                 Preencha o formulário ao lado e um de nossos especialistas entrará em contato para entender o seu momento.
               </p>
@@ -144,7 +144,7 @@ _Enviado via site agenciastartin.com_`;
           {/* Form Side */}
           <div className="lg:w-2/3">
             <FadeIn delay={200}>
-              <form onSubmit={handleSubmit} className="bg-brand-gray p-8 md:p-10 rounded-2xl border border-white/5 space-y-6">
+              <form onSubmit={handleSubmit} className="bg-brand-gray p-6 sm:p-8 md:p-10 rounded-2xl border border-white/5 space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium text-gray-300">Nome Completo *</label>

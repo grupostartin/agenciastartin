@@ -10,7 +10,7 @@ export const About: React.FC = () => {
       <Section>
         <div className="max-w-4xl mx-auto">
           <FadeIn>
-            <h1 className="text-4xl md:text-6xl font-bold mb-8">Sobre a Startin</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-8">Sobre a Startin</h1>
             <p className="text-xl text-gray-400 leading-relaxed mb-12">
               Nascemos em Belo Horizonte com um propósito claro: simplificar o marketing digital e focar no que realmente importa: resultados reais e conexões humanas.
             </p>
@@ -36,8 +36,8 @@ export const About: React.FC = () => {
                   <Star className="w-5 h-5 text-white fill-white" />
                   <span className="text-sm font-bold uppercase tracking-widest text-white/50">Nosso Grande Diferencial</span>
                 </div>
-                <h2 className="text-3xl md:text-5xl font-bold mb-6">Comunicação Leve e Descontraída</h2>
-                <p className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed mb-8">
+                <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6">Comunicação Leve e Descontraída</h2>
+                <p className="text-lg md:text-2xl text-gray-300 font-light leading-relaxed mb-8">
                   Acreditamos que os melhores resultados surgem de parcerias reais. Na Startin, fugimos do "corporatês" engessado para oferecer uma <span className="text-white font-bold underline decoration-white/30 underline-offset-4">experiência transparente, ágil e, acima de tudo, humana.</span>
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -81,7 +81,7 @@ export const About: React.FC = () => {
             </FadeIn>
           </div>
 
-          <FadeIn delay={500} className="bg-white/5 border border-white/10 p-12 rounded-3xl text-center relative overflow-hidden group">
+          <FadeIn delay={500} className="bg-white/5 border border-white/10 p-8 md:p-12 rounded-3xl text-center relative overflow-hidden group">
             <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
             <h3 className="text-3xl font-bold mb-4 relative z-10">Quer uma parceria sem frescura?</h3>
             <p className="mb-8 text-gray-400 max-w-xl mx-auto text-lg relative z-10">

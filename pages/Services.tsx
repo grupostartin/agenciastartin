@@ -11,7 +11,7 @@ export const ServicesPage: React.FC = () => {
       <Section>
         <div className="text-center mb-16">
           <FadeIn>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Nossos Serviços</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6">Nossos Serviços</h1>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
               Soluções integradas de marketing digital para alavancar seu negócio em todas as frentes.
             </p>
@@ -48,7 +48,7 @@ export const ServicesPage: React.FC = () => {
                     </ul>
                   </div>
 
-                  <div className="pt-6 flex gap-4">
+                  <div className="pt-6 flex flex-wrap gap-4">
                     <Button to={`/contact?service=${service.title}`} variant="secondary">
                       Tenho interesse
                     </Button>

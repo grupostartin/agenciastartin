@@ -32,7 +32,7 @@ export const UGCPage: React.FC = () => {
                             <span className="inline-block py-1 px-3 bg-white/10 rounded-full text-sm font-medium text-white mb-6 border border-white/10">
                                 Talent Management & UGC Strategy
                             </span>
-                            <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+                            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 tracking-tight">
                                 Conteúdo que <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Gera Vendas</span>.
                             </h1>
                             <p className="text-xl text-gray-400 mb-8 leading-relaxed max-w-2xl">
@@ -92,7 +92,7 @@ export const UGCPage: React.FC = () => {
             <Section id="portfolio">
                 <div className="mb-16">
                     <FadeIn>
-                        <h2 className="text-4xl font-bold mb-4">Nosso Elenco</h2>
+                        <h2 className="text-3xl sm:text-4xl font-bold mb-4">Nosso Elenco</h2>
                         <div className="h-1 w-20 bg-white" />
                     </FadeIn>
                 </div>
@@ -120,7 +120,7 @@ export const UGCPage: React.FC = () => {
             <Section bg="gray">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <FadeIn>
-                        <h2 className="text-3xl font-bold mb-8">Por que nos escolher?</h2>
+                        <h2 className="text-2xl sm:text-3xl font-bold mb-8">Por que nos escolher?</h2>
                         <ul className="space-y-6">
                             {[
                                 "Curadoria rigorosa de criadores",
@@ -145,7 +145,7 @@ export const UGCPage: React.FC = () => {
             {/* CTA */}
             <Section className="text-center py-20">
                 <FadeIn>
-                    <h2 className="text-4xl font-bold mb-8 uppercase tracking-tighter italic">Vamos elevar o nível?</h2>
+                    <h2 className="text-3xl sm:text-4xl font-bold mb-8 uppercase tracking-tighter italic">Vamos elevar o nível?</h2>
                     <Button to="/contact?service=UGC" variant="primary" className="text-lg px-12 py-4">
                         Falar com Especialista
                     </Button>
