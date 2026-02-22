@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Section } from '../components/UI/Section';
-import { FadeIn } from '../components/UI/FadeIn';
+import { Section } from '../components/ui/Section';
+import { FadeIn } from '../components/ui/FadeIn';
 import { PROJECTS } from '../constants';
-import { Button } from '../components/UI/Button';
+import { Button } from '../components/ui/Button';
 
 export const Portfolio: React.FC = () => {
   const [filter, setFilter] = useState('Todos');

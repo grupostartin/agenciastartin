@@ -1,6 +1,6 @@
 import React from 'react';
-import { Section } from '../components/UI/Section';
-import { FadeIn } from '../components/UI/FadeIn';
+import { Section } from '../components/ui/Section';
+import { FadeIn } from '../components/ui/FadeIn';
 
 export const Terms: React.FC = () => {
     return (

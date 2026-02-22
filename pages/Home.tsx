@@ -1,11 +1,11 @@
 import React from 'react';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
-import { Section } from '../components/UI/Section';
-import { Button } from '../components/UI/Button';
-import { FadeIn } from '../components/UI/FadeIn';
+import { Section } from '../components/ui/Section';
+import { Button } from '../components/ui/Button';
+import { FadeIn } from '../components/ui/FadeIn';
 import { SERVICES, PROCESS_STEPS, PROJECTS, TESTIMONIALS } from '../constants';
 import { Link } from 'react-router-dom';
-import NeuralBackground from '../components/UI/flow-field-background';
+import NeuralBackground from '../components/ui/flow-field-background';
 
 export const Home: React.FC = () => {
   return (

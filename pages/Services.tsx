@@ -1,8 +1,8 @@
 import React from 'react';
-import { Section } from '../components/UI/Section';
-import { FadeIn } from '../components/UI/FadeIn';
+import { Section } from '../components/ui/Section';
+import { FadeIn } from '../components/ui/FadeIn';
 import { SERVICES } from '../constants';
-import { Button } from '../components/UI/Button';
+import { Button } from '../components/ui/Button';
 import { CheckCircle2 } from 'lucide-react';
 
 export const ServicesPage: React.FC = () => {

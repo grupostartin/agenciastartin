@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Section } from '../components/UI/Section';
-import { FadeIn } from '../components/UI/FadeIn';
-import { Button } from '../components/UI/Button';
+import { Section } from '../components/ui/Section';
+import { FadeIn } from '../components/ui/FadeIn';
+import { Button } from '../components/ui/Button';
 import { ContactFormData, ContactServiceType } from '../types';
 import { Mail, Phone, MapPin, CheckCircle } from 'lucide-react';
 
@@ -248,7 +248,7 @@ _Enviado via site agenciastartin.com_`;
                 </div>
 
                 <Button id="submit-btn" type="submit" fullWidth disabled={!formData.consent}>
-                  Enviar Solicitação
+                  Enviar solicitação via WhatsApp
                 </Button>
               </form>
             </FadeIn>

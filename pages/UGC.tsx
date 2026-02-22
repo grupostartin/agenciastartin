@@ -1,10 +1,10 @@
 import React from 'react';
-import { Section } from '../components/UI/Section';
-import { FadeIn } from '../components/UI/FadeIn';
-import { Button } from '../components/UI/Button';
+import { Section } from '../components/ui/Section';
+import { FadeIn } from '../components/ui/FadeIn';
+import { Button } from '../components/ui/Button';
 import { UGC_CREATORS } from '../constants';
 import { CheckCircle2, TrendingUp, ShieldCheck, Users, Instagram, Music2 } from 'lucide-react';
-import { Carousel, TestimonialCard } from '../components/UI/retro-testimonial';
+import { Carousel, TestimonialCard } from '../components/ui/retro-testimonial';
 
 export const UGCPage: React.FC = () => {
     return (
