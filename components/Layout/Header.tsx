@@ -17,67 +17,105 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Close menu on route change
   useEffect(() => {
     setIsOpen(false);
   }, [location]);
 
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [isOpen]);
+
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled || isOpen ? 'bg-black/90 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
-        }`}
-    >
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="text-2xl font-bold tracking-tighter text-white z-50">
-            STARTIN<span className="text-brand-gray-text">.</span>
-          </Link>
-
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            {NAVIGATION_LINKS.filter(link => link.name !== 'Contato').map((link) => (
-              <Link
-                key={link.name}
-                to={link.path}
-                className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
-              >
-                {link.name}
-              </Link>
-            ))}
-            <Button variant="primary" to="/contact" className="!px-6 !py-2 text-sm">
-              Falar com Especialista
-            </Button>
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-white z-50 p-2"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Nav Overlay */}
-      <div
-        className={`fixed inset-0 bg-black z-40 flex flex-col items-center justify-center gap-8 transition-transform duration-300 md:hidden ${isOpen ? 'translate-x-0' : 'translate-x-full'
+    <>
+      {/* Header bar */}
+      <header
+        className={`fixed top-0 left-0 w-full z-[60] transition-all duration-300 ${scrolled || isOpen
+            ? 'bg-black/90 backdrop-blur-md border-b border-white/10'
+            : 'bg-transparent'
           }`}
       >
-        {NAVIGATION_LINKS.filter(link => link.name !== 'Contato').map((link) => (
-          <Link
-            key={link.name}
-            to={link.path}
-            className="text-2xl font-semibold text-white hover:text-gray-400"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
+          <div className="flex items-center justify-between h-20">
+            {/* Logo */}
+            <Link
+              to="/"
+              className="text-2xl font-bold tracking-tighter text-white"
+              onClick={() => setIsOpen(false)}
+            >
+              STARTIN<span className="text-brand-gray-text">.</span>
+            </Link>
+
+            {/* Desktop Nav */}
+            <nav className="hidden md:flex items-center gap-8">
+              {NAVIGATION_LINKS.filter(link => link.name !== 'Contato').map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
+                >
+                  {link.name}
+                </Link>
+              ))}
+              <Button variant="primary" to="/contact" className="!px-6 !py-2 text-sm">
+                Falar com Especialista
+              </Button>
+            </nav>
+
+            {/* Mobile Hamburger — always on top */}
+            <button
+              className="md:hidden text-white p-2 rounded-md focus:outline-none"
+              onClick={() => setIsOpen(prev => !prev)}
+              aria-label="Abrir menu"
+              aria-expanded={isOpen}
+            >
+              {isOpen ? <X size={26} /> : <Menu size={26} />}
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Mobile Nav Overlay — separate from header so z-index is independent */}
+      <div
+        className={`fixed inset-0 z-50 bg-black flex flex-col items-center justify-center gap-8 transition-transform duration-300 ease-in-out md:hidden ${isOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
+        aria-hidden={!isOpen}
+      >
+        {/* Close button inside overlay */}
+        <button
+          className="absolute top-6 right-4 text-white p-2"
+          onClick={() => setIsOpen(false)}
+          aria-label="Fechar menu"
+        >
+          <X size={26} />
+        </button>
+
+        <nav className="flex flex-col items-center gap-8">
+          {NAVIGATION_LINKS.filter(link => link.name !== 'Contato').map((link) => (
+            <Link
+              key={link.name}
+              to={link.path}
+              className="text-2xl font-semibold text-white hover:text-gray-400 transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              {link.name}
+            </Link>
+          ))}
+          <Button
+            variant="primary"
+            to="/contact"
+            className="mt-4 text-base px-8 py-3"
           >
-            {link.name}
-          </Link>
-        ))}
-        <Button variant="primary" to="/contact" className="mt-4">
-          Falar com Especialista
-        </Button>
+            Falar com Especialista
+          </Button>
+        </nav>
       </div>
-    </header>
+    </>
   );
 };
