@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agência Startin | Marketing Digital em BH</title>
+    <meta name="description" content="Transforme ideias em resultados reais. Videomaker, Sites e Tráfego Pago em Belo Horizonte." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                black: '#000000',
+                white: '#FFFFFF',
+                gray: '#1a1a1a',
+                'gray-light': '#333333',
+                'gray-text': '#888888'
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #000000;
+        color: #ffffff;
+      }
+
+      /* Sterling Gate Kinetic Navigation Styles */
+      :root {
+        --color-primary: #6366f1;
+        --color-dark: #131313;
+        --color-neutral-100: #f5f5f5;
+        --color-neutral-200: #e5e5e5;
+        --color-neutral-300: #d4d4d4;
+        --color-neutral-800: #262626;
+        --size-container: 1400px;
+        --container-padding: 2em;
+        --section-padding: 4em;
+        --gap: 1.5em;
+        --cubic-default: cubic-bezier(0.65, 0.05, 0, 1);
+      }
+
+      .nav-close-btn {
+        width: 3.5rem;
+        height: 3.5rem;
+        background: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        color: black;
+        overflow: hidden;
+        cursor: pointer;
+        border: none;
+      }
+
+      .menu-button-text {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        z-index: 2;
+        pointer-events: none;
+      }
+      
+      .menu-button-text p {
+        position: absolute;
+        margin: 0;
+      }
+      .menu-button-text p:last-child {
+        transform: translateY(100%);
+      }
+
+      .icon-wrap {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0; /* Hidden by default, relying on GSAP or text */
+      }
+      
+      .menu-button-icon {
+        width: 16px;
+        height: 16px;
+      }
+
+      /* Fullscreen Menu Containers */
+      .fullscreen-menu-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        pointer-events: none;
+      }
+
+      .nav-overlay-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        pointer-events: auto;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+      }
+
+      .menu-content {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        max-width: 600px;
+        height: 100%;
+        background: transparent;
+        transform: translateX(100%);
+      }
+
+      .menu-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .backdrop-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      
+      .backdrop-layer.first { background-color: #333; z-index: 1; }
+      .backdrop-layer.second { background-color: #222; z-index: 2; }
+      .backdrop-layer:last-child { background-color: #000; z-index: 3; border-left: 1px solid rgba(255,255,255,0.1); }
+
+      .ambient-background-shapes {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 4;
+        pointer-events: none;
+      }
+
+      .bg-shape {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 120%;
+        height: 120%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+      
+      .bg-shape.active {
+        opacity: 1;
+      }
+
+      .menu-content-wrapper {
+        position: relative;
+        z-index: 10;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 4rem;
+      }
+
+      .menu-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .menu-list-item {
+        margin-bottom: 0.5rem;
+        overflow: hidden;
+      }
+
+      .nav-link {
+        display: block;
+        font-size: 3rem;
+        font-weight: 700;
+        color: #fff;
+        text-decoration: none;
+        transform: translateY(100%) rotate(10deg);
+        transform-origin: left bottom;
+        transition: color 0.3s ease;
+      }
+      
+      .nav-link:hover {
+        color: var(--color-primary);
+      }
+
+      @media (max-width: 768px) {
+        .nav-link {
+          font-size: 2rem;
+        }
+        .menu-content {
+            max-width: 100%;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "clsx": "https://esm.sh/clsx@^2.1.0",
+    "tailwind-merge": "https://esm.sh/tailwind-merge@^2.2.1",
+    "gsap": "https://esm.sh/gsap@3.12.5",
+    "gsap/CustomEase": "https://esm.sh/gsap@3.12.5/dist/CustomEase",
+    "gsap/": "https://esm.sh/gsap@^3.14.2/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
