@@ -6,6 +6,12 @@ import { Button } from '../components/ui/Button';
 import { ContactFormData, ContactServiceType } from '../types';
 import { Mail, Phone, MapPin, CheckCircle } from 'lucide-react';
 
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
+
 export const Contact: React.FC = () => {
   const location = useLocation();
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -67,6 +73,15 @@ _Enviado via site agenciastartin.com_`;
 
     // Open WhatsApp in a new tab
     window.open(whatsappUrl, '_blank');
+
+    // Google Analytics Lead Event
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'generate_lead', {
+        'event_category': 'Contact',
+        'event_label': 'WhatsApp Lead Form',
+        'value': 1
+      });
+    }
 
     // Show success state in the UI
     setTimeout(() => {
