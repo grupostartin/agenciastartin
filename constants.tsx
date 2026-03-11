@@ -1,12 +1,12 @@
 import React from 'react';
 import { Smartphone, Monitor, BarChart3, Users, Rocket, Zap, Video } from 'lucide-react';
-import { ServiceItem, Project, Testimonial, Creator } from './types';
+import { ServiceItem, Project, Testimonial, Creator, CaseStudy } from './types';
 
 export const NAVIGATION_LINKS = [
   { name: 'Home', path: '/' },
   { name: 'UGC', path: '/ugc' },
   { name: 'Serviços', path: '/services' },
-  { name: 'Portfólio', path: '/portfolio' },
+  { name: 'Cases', path: '/cases' },
   { name: 'Sobre', path: '/about' },
   { name: 'Contato', path: '/contact' },
 ];
@@ -69,56 +69,44 @@ export const PROCESS_STEPS = [
   }
 ];
 
-export const PROJECTS: Project[] = [
+export const CASE_STUDIES: CaseStudy[] = [
   {
-    id: '1',
-    title: 'Lançamento Modas BH',
-    client: 'Modas BH',
-    category: 'Videomaker',
-    imageUrl: 'https://picsum.photos/800/600?grayscale&random=1',
-    tags: ['Reels', 'Eventos', 'Fashion']
+    id: 'isabella-franklin',
+    client: 'Isabella Franklin',
+    description: 'Mentora feminina e Terapeuta Sistêmica que escalou seu posicionamento digital. Através de uma estratégia de conversão otimizada, aumentamos a autoridade e as vendas do seu negócio.',
+    category: 'Mentoria & Terapia',
+    tags: ['Estratégia Digital', 'Conversão', 'Branding'],
+    metrics: [
+      { label: 'Aumento no Faturamento', value: '+97%' },
+      { label: 'Mais Agendamentos', value: '+120%' },
+      { label: 'Cliques no Site', value: '+238%' }
+    ]
   },
   {
-    id: '2',
-    title: 'Landing Page TechStart',
-    client: 'TechStart Solutions',
-    category: 'Sites',
-    imageUrl: 'https://picsum.photos/800/600?grayscale&random=2',
-    tags: ['Web Design', 'Conversion', 'React']
+    id: 'lideranca-portas-aco',
+    client: 'Liderança Portas de Aço',
+    description: 'Empresa líder em soluções de segurança. Implementamos uma gestão de tráfego pago agressiva e focada em ROI, resultando em um crescimento exponencial de vendas em tempo recorde.',
+    category: 'Indústria',
+    tags: ['Tráfego Pago', 'Escala', 'Vendas'],
+    metrics: [
+      { label: 'Faturamento Extra', value: '+200%' },
+      { label: 'Período', value: '3 Meses' }
+    ]
   },
   {
-    id: '3',
-    title: 'Campanha Black Friday',
-    client: 'E-commerce House',
-    category: 'Tráfego',
-    imageUrl: 'https://picsum.photos/800/600?grayscale&random=3',
-    tags: ['Meta Ads', 'Google Ads', 'ROI']
-  },
-  {
-    id: '4',
-    title: 'Cobertura Evento Corporativo',
-    client: 'Grupo Valor',
-    category: 'Videomaker',
-    imageUrl: 'https://picsum.photos/800/600?grayscale&random=4',
-    tags: ['Corporate', 'Highlights']
-  },
-  {
-    id: '5',
-    title: 'Site Institucional Advocacia',
-    client: 'Silva & Santos',
-    category: 'Sites',
-    imageUrl: 'https://picsum.photos/800/600?grayscale&random=5',
-    tags: ['Institutional', 'SEO']
-  },
-  {
-    id: '6',
-    title: 'Campanha Leads Imobiliária',
-    client: 'Imóveis Prime',
-    category: 'Tráfego',
-    imageUrl: 'https://picsum.photos/800/600?grayscale&random=6',
-    tags: ['Lead Gen', 'Real Estate']
+    id: 'prevent-vision',
+    client: 'Prevent Vision',
+    description: 'Lançamento de produto exclusivo no setor de saúde e tecnologia. Desenvolvemos uma Landing Page de alta performance, leve e moderna para garantir a melhor experiência de conversão.',
+    category: 'Saúde & Tech',
+    tags: ['Lançamento', 'Web Design', 'Performance'],
+    metrics: [
+      { label: 'Faturamento vs Esperado', value: '+30%' },
+      { label: 'Site', value: 'Leve & Tech' }
+    ]
   }
 ];
+
+// Redundant PROJECTS removed. Using CASE_STUDIES for high-performance references.
 
 export const TESTIMONIALS: Testimonial[] = [
   {

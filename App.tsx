@@ -4,7 +4,7 @@ import { ThemeProvider } from 'next-themes';
 import { Header } from './components/Layout/Header';
 import { Footer } from './components/Layout/Footer';
 import { Home } from './pages/Home';
-import { Portfolio } from './pages/Portfolio';
+import { Cases } from './pages/Cases';
 import { Contact } from './pages/Contact';
 import { ServicesPage } from './pages/Services';
 import { About } from './pages/About';
@@ -34,7 +34,7 @@ const App: React.FC = () => {
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/cases" element={<Cases />} />
               <Route path="/services" element={<ServicesPage />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />

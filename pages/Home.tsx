@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Section } from '../components/ui/Section';
 import { Button } from '../components/ui/Button';
 import { FadeIn } from '../components/ui/FadeIn';
-import { SERVICES, PROCESS_STEPS, PROJECTS, TESTIMONIALS } from '../constants';
+import { SERVICES, PROCESS_STEPS, CASE_STUDIES, TESTIMONIALS } from '../constants';
 import { Link } from 'react-router-dom';
 import NeuralBackground from '../components/ui/flow-field-background';
 
@@ -29,20 +29,20 @@ export const Home: React.FC = () => {
           <div className="max-w-3xl">
             <FadeIn delay={100}>
               <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
-                Transforme Ideias em <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Resultados Reais</span>.
+                Onde o olhar do seu cliente pousa, <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">a gente converte</span>.
               </h1>
             </FadeIn>
             <FadeIn delay={200}>
               <p className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl font-light">
-                Especialistas em vídeo, UGC, sites de alta conversão e tráfego pago em Belo Horizonte.
+                Sua empresa é um motor potente que não pode mais girar em falso. Criamos o ecossistema completo onde o conteúdo viral encontra a estrutura de vendas de alta performance. O resultado? Escala sem teto.
               </p>
             </FadeIn>
             <FadeIn delay={300} className="flex flex-col sm:flex-row gap-4">
               <Button to="/contact" variant="primary">
                 Solicitar Orçamento
               </Button>
-              <Button to="/portfolio" variant="secondary">
-                Ver Portfólio
+              <Button to="/cases" variant="secondary">
+                Ver Cases
               </Button>
             </FadeIn>
           </div>
@@ -111,31 +111,36 @@ export const Home: React.FC = () => {
         </div>
       </Section>
 
-      {/* Portfolio Preview */}
+      {/* Cases Preview */}
       <Section bg="gray">
         <div className="flex justify-between items-end mb-12">
           <FadeIn>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Projetos Recentes</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Cases de Sucesso</h2>
             <div className="h-1 w-20 bg-white" />
           </FadeIn>
           <FadeIn delay={100} className="hidden md:block">
-            <Link to="/portfolio" className="text-white border-b border-white/30 hover:border-white pb-1 transition-all">Ver todos os projetos</Link>
+            <Link to="/cases" className="text-white border-b border-white/30 hover:border-white pb-1 transition-all">Ver todos os cases</Link>
           </FadeIn>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {PROJECTS.slice(0, 4).map((project, index) => (
-            <FadeIn key={project.id} delay={index * 100}>
-              <div className="group relative overflow-hidden rounded-xl aspect-video cursor-pointer">
-                <img
-                  src={project.imageUrl}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                  <span className="text-sm font-medium text-gray-300 mb-2">{project.category}</span>
-                  <h3 className="text-2xl font-bold">{project.title}</h3>
-                  <p className="text-gray-400">{project.client}</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {CASE_STUDIES.slice(0, 3).map((study, index) => (
+            <FadeIn key={study.id} delay={index * 100}>
+              <div className="group h-full flex flex-col bg-[#0A0A0A] border border-white/5 hover:border-white/20 transition-all p-10 rounded-[2rem]">
+                <div className="flex justify-between items-start mb-8">
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold">{study.category}</span>
+                </div>
+                
+                <h3 className="text-3xl font-bold mb-4 text-white group-hover:translate-x-1 transition-transform">{study.client}</h3>
+                <p className="text-gray-500 text-sm mb-10 flex-grow font-light leading-relaxed">{study.description}</p>
+                
+                <div className="space-y-4">
+                  {study.metrics.slice(0, 1).map((metric, idx) => (
+                    <div key={idx} className="bg-white/5 rounded-2xl p-6 border border-white/5">
+                      <div className="text-4xl font-bold text-white mb-1">{metric.value}</div>
+                      <div className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">{metric.label}</div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </FadeIn>
@@ -143,7 +148,7 @@ export const Home: React.FC = () => {
         </div>
 
         <div className="mt-8 md:hidden text-center">
-          <Button to="/portfolio" variant="secondary" fullWidth>Ver todos os projetos</Button>
+          <Button to="/cases" variant="secondary" fullWidth>Ver todos os cases</Button>
         </div>
       </Section>
 

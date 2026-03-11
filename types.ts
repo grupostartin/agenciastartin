@@ -18,6 +18,19 @@ export interface Project {
   description?: string;
 }
 
+export interface CaseStudy {
+  id: string;
+  client: string;
+  description: string;
+  metrics: {
+    label: string;
+    value: string;
+  }[];
+  category: string;
+  tags: string[];
+}
+
+
 export interface Testimonial {
   id: string;
   name: string;
