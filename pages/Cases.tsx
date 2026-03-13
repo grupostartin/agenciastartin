@@ -24,7 +24,7 @@ export const Cases: React.FC = () => {
             <div className="inline-block px-4 py-1.5 mb-6 border border-white/10 rounded-full bg-white/5 backdrop-blur-sm">
               <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-gray-400">Resultados Reais</span>
             </div>
-            <h1 className="text-5xl md:text-8xl font-bold mb-8 tracking-tighter">
+            <h1 className="text-4xl sm:text-5xl md:text-8xl font-bold mb-8 tracking-tighter">
               Nossos <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40">Cases</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto font-light leading-relaxed">
@@ -37,21 +37,21 @@ export const Cases: React.FC = () => {
         <div className="flex flex-col gap-12 max-w-5xl mx-auto">
           {CASE_STUDIES.map((study, index) => (
             <FadeIn key={study.id} delay={index * 100}>
-              <div className="group relative bg-gradient-to-br from-[#111] to-black rounded-[3rem] p-8 md:p-12 border border-white/10 hover:border-white/30 transition-all duration-700 overflow-hidden">
+              <div className="group relative bg-gradient-to-br from-[#111] to-black rounded-3xl md:rounded-[3rem] p-6 sm:p-8 md:p-12 border border-white/10 hover:border-white/30 transition-all duration-700 overflow-hidden">
                 
                 {/* Decorative glow */}
                 <div className="absolute -top-32 -right-32 w-64 h-64 bg-white/5 blur-[100px] group-hover:bg-white/10 transition-colors duration-700" />
                 
-                <div className="relative z-10 flex flex-col lg:flex-row gap-12">
+                <div className="relative z-10 flex flex-col lg:flex-row gap-8 md:gap-12">
                   {/* Content Area */}
                   <div className="flex-1">
-                    <div className="flex justify-between items-start mb-8">
+                    <div className="flex justify-between items-start mb-6 md:mb-8">
                       <span className="text-[10px] uppercase tracking-[0.3em] text-white bg-white/10 px-5 py-2.5 rounded-full font-bold">
                         {study.category}
                       </span>
                     </div>
 
-                    <h3 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tighter leading-tight">
+                    <h3 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6 tracking-tighter leading-tight">
                       {study.client}
                     </h3>
                     
@@ -95,7 +95,7 @@ export const Cases: React.FC = () => {
         {/* Premium CTA */}
         <FadeIn delay={300} className="mt-32">
           <div className="relative p-1 bg-gradient-to-r from-white/20 via-white/5 to-white/20 rounded-[3rem]">
-            <div className="bg-black rounded-[2.9rem] p-16 md:p-24 text-center relative overflow-hidden">
+            <div className="bg-black rounded-3xl md:rounded-[2.9rem] p-8 sm:p-12 md:p-24 text-center relative overflow-hidden">
                {/* Lights */}
               <div className="absolute top-0 left-1/4 w-1/2 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
               

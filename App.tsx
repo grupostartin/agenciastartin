@@ -29,7 +29,7 @@ const App: React.FC = () => {
       <Router>
         <SplashScreen />
         <ScrollToTop />
-        <div className="flex flex-col min-h-screen bg-black text-white font-sans selection:bg-white selection:text-black">
+        <div className="flex flex-col min-h-screen bg-black text-white font-sans selection:bg-white selection:text-black overflow-x-hidden">
           <Header />
           <main className="flex-grow">
             <Routes>

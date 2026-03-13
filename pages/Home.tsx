@@ -58,10 +58,10 @@ export const Home: React.FC = () => {
           </FadeIn>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {SERVICES.map((service, index) => (
             <FadeIn key={service.id} delay={index * 100}>
-              <div className="group h-full p-8 bg-black border border-white/5 hover:border-white/20 transition-all duration-300 rounded-xl">
+              <div className="group h-full p-6 sm:p-8 bg-black border border-white/5 hover:border-white/20 transition-all duration-300 rounded-xl">
                 <div className="mb-6 text-white bg-white/10 p-4 rounded-lg inline-block group-hover:bg-white group-hover:text-black transition-colors duration-300">
                   {service.icon}
                 </div>
@@ -126,8 +126,8 @@ export const Home: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {CASE_STUDIES.slice(0, 3).map((study, index) => (
             <FadeIn key={study.id} delay={index * 100}>
-              <div className="group h-full flex flex-col bg-[#0A0A0A] border border-white/5 hover:border-white/20 transition-all p-10 rounded-[2rem]">
-                <div className="flex justify-between items-start mb-8">
+              <div className="group h-full flex flex-col bg-[#0A0A0A] border border-white/5 hover:border-white/20 transition-all p-6 sm:p-10 rounded-3xl md:rounded-[2rem]">
+                <div className="flex justify-between items-start mb-6 md:mb-8">
                   <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold">{study.category}</span>
                 </div>
                 

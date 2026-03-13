@@ -4,7 +4,7 @@ import { ServiceItem, Project, Testimonial, Creator, CaseStudy } from './types';
 
 export const NAVIGATION_LINKS = [
   { name: 'Home', path: '/' },
-  { name: 'UGC', path: '/ugc' },
+  // { name: 'UGC', path: '/ugc' }, // Hidden for now
   { name: 'Serviços', path: '/services' },
   { name: 'Cases', path: '/cases' },
   { name: 'Sobre', path: '/about' },

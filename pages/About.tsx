@@ -17,7 +17,7 @@ export const About: React.FC = () => {
           </FadeIn>
 
           <FadeIn delay={100}>
-            <div className="aspect-[21/9] bg-brand-gray rounded-2xl mb-12 overflow-hidden relative">
+            <div className="aspect-video md:aspect-[21/9] bg-brand-gray rounded-2xl mb-12 overflow-hidden relative">
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200"
                 alt="Equipe Startin em colaboração"
@@ -29,7 +29,7 @@ export const About: React.FC = () => {
 
           {/* Nosso Diferencial em Destaque */}
           <FadeIn delay={200} className="mb-20">
-            <div className="bg-white/5 border border-white/10 p-8 md:p-12 rounded-3xl relative overflow-hidden group hover:border-white/20 transition-colors">
+            <div className="bg-white/5 border border-white/10 p-6 sm:p-8 md:p-12 rounded-3xl relative overflow-hidden group hover:border-white/20 transition-colors">
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-3xl group-hover:bg-white/10 transition-colors" />
               <div className="relative z-10">
                 <div className="flex items-center gap-2 mb-6">

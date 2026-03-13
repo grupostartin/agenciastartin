@@ -18,7 +18,7 @@ export const UGCPage: React.FC = () => {
                         muted
                         loop
                         playsInline
-                        className="w-full h-full object-cover scale-125 translate-x-32 translate-y-16"
+                        className="w-full h-full object-cover scale-150 md:scale-125 md:translate-x-32 md:translate-y-16"
                     >
                         <source src="/Create_a_cinematic_1080p_202602221234.mp4" type="video/mp4" />
                     </video>
@@ -29,13 +29,13 @@ export const UGCPage: React.FC = () => {
                 <div className="max-w-7xl mx-auto relative z-10">
                     <div className="max-w-3xl">
                         <FadeIn>
-                            <span className="inline-block py-1 px-3 bg-white/10 rounded-full text-sm font-medium text-white mb-6 border border-white/10">
+                            <span className="inline-block py-1 px-3 bg-white/10 rounded-full text-[10px] md:text-sm font-medium text-white mb-6 border border-white/10 uppercase tracking-widest">
                                 Talent Management & UGC Strategy
                             </span>
-                            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+                            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-tight">
                                 Conteúdo que <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Gera Vendas</span>.
                             </h1>
-                            <p className="text-xl text-gray-400 mb-8 leading-relaxed max-w-2xl">
+                            <p className="text-lg md:text-xl text-gray-400 mb-8 leading-relaxed max-w-2xl">
                                 Conectamos sua marca aos melhores criadores de conteúdo do mercado.
                                 Produção autêntica, humana e focada em resultados reais para o seu negócio.
                             </p>

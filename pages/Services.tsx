@@ -23,8 +23,8 @@ export const ServicesPage: React.FC = () => {
             <FadeIn key={service.id} delay={index * 100}>
               <div className={`flex flex-col md:flex-row gap-12 items-center ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
                 <div className="flex-1 w-full">
-                  <div className="bg-brand-gray p-8 md:p-12 rounded-2xl border border-white/5 h-full flex items-center justify-center aspect-video md:aspect-auto min-h-[300px]">
-                    <div className="transform scale-150 text-white/20">
+                  <div className="bg-brand-gray p-6 sm:p-8 md:p-12 rounded-2xl border border-white/5 h-full flex items-center justify-center aspect-video md:aspect-auto min-h-[200px] md:min-h-[300px]">
+                    <div className="transform scale-125 md:scale-150 text-white/20">
                       {service.icon}
                     </div>
                   </div>
@@ -52,11 +52,11 @@ export const ServicesPage: React.FC = () => {
                     <Button to={`/contact?service=${service.title}`} variant="secondary">
                       Tenho interesse
                     </Button>
-                    {service.id === 'ugc' && (
+                    {/* {service.id === 'ugc' && (
                       <Button to="/ugc" variant="outline" className="border-white/20 text-white hover:bg-white/5">
                         Ver Portfólio de Criadores
                       </Button>
-                    )}
+                    )} */}
                   </div>
                 </div>
               </div>
