@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Linkedin, Mail, MessageSquare } from 'lucide-react';
+import { Instagram, Mail, MessageSquare } from 'lucide-react';
 import { NAVIGATION_LINKS } from '../../constants';
 
 export const Footer: React.FC = () => {
@@ -19,9 +19,6 @@ export const Footer: React.FC = () => {
             <div className="flex gap-4">
               <a href="https://instagram.com/agenciastartin" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/5 rounded-full hover:bg-white/10 transition-colors text-white">
                 <Instagram size={20} />
-              </a>
-              <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-white/10 transition-colors text-white">
-                <Linkedin size={20} />
               </a>
               <a href="mailto:contatostartin@gmail.com" className="p-2 bg-white/5 rounded-full hover:bg-white/10 transition-colors text-white">
                 <Mail size={20} />
