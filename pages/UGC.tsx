@@ -4,7 +4,7 @@ import { FadeIn } from '../components/ui/FadeIn';
 import { Button } from '../components/ui/Button';
 import { UGC_CREATORS } from '../constants';
 import { CheckCircle2, TrendingUp, ShieldCheck, Users, Instagram, Music2 } from 'lucide-react';
-import { Carousel, TestimonialCard } from '../components/ui/retro-testimonial';
+// import { Carousel, TestimonialCard } from '../components/ui/retro-testimonial';
 
 export const UGCPage: React.FC = () => {
     return (
@@ -30,7 +30,7 @@ export const UGCPage: React.FC = () => {
                     <div className="max-w-3xl">
                         <FadeIn>
                             <span className="inline-block py-1 px-3 bg-white/10 rounded-full text-[10px] md:text-sm font-medium text-white mb-6 border border-white/10 uppercase tracking-widest">
-                                Talent Management & UGC Strategy
+                                Gestão de Talentos & Estratégia UGC
                             </span>
                             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-tight">
                                 Conteúdo que <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Gera Vendas</span>.
@@ -92,27 +92,59 @@ export const UGCPage: React.FC = () => {
             <Section id="portfolio">
                 <div className="mb-16">
                     <FadeIn>
-                        <h2 className="text-3xl sm:text-4xl font-bold mb-4">Nosso Elenco</h2>
+                        <h2 className="text-3xl sm:text-4xl font-bold mb-4 uppercase tracking-tighter italic">Nossa Curadoria</h2>
                         <div className="h-1 w-20 bg-white" />
+                        <p className="mt-4 text-gray-400">Criativos selecionados a dedo para elevar o nível do seu conteúdo.</p>
                     </FadeIn>
                 </div>
 
-                <div className="mt-10">
-                    <Carousel
-                        items={UGC_CREATORS.map((creator, idx) => (
-                            <TestimonialCard
-                                key={creator.id}
-                                index={idx}
-                                testimonial={{
-                                    name: creator.name,
-                                    designation: creator.specialties.join(' • '),
-                                    description: creator.bio,
-                                    profileImage: creator.imageUrl
-                                }}
-                                backgroundImage="https://images.unsplash.com/photo-1528458965990-428de4b1cb0d?q=80&w=3129&auto=format&fit=crop"
-                            />
-                        ))}
-                    />
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {UGC_CREATORS.map((creator, idx) => (
+                        <FadeIn key={creator.id} delay={idx * 100}>
+                            <div className="group relative bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 hover:border-white/20 transition-all duration-500 overflow-hidden">
+                                {/* Subtle background gradient on hover */}
+                                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                
+                                <div className="relative z-10">
+                                    <div className="flex items-center gap-4 mb-6">
+                                        <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-white/30 transition-colors duration-500 shrink-0">
+                                            <img 
+                                                src={creator.imageUrl} 
+                                                alt={creator.name} 
+                                                className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-700"
+                                            />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-xl font-bold text-white tracking-tight">{creator.name}</h3>
+                                            <div className="flex flex-wrap gap-2 mt-2">
+                                                {creator.specialties.map((spec) => (
+                                                    <span key={spec} className="text-[10px] uppercase tracking-widest bg-white/10 px-2 py-0.5 rounded-full text-gray-300 border border-white/5">
+                                                        {spec}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <p className="text-gray-400 text-sm leading-relaxed mb-6 italic">
+                                        "{creator.bio}"
+                                    </p>
+                                    
+                                    <div className="flex items-center justify-between pt-6 border-t border-white/5">
+                                        <span className="text-[10px] text-gray-500 uppercase tracking-widest font-medium">UGC Specialist</span>
+                                        <a 
+                                            href={`https://instagram.com/${creator.instagram?.replace('@', '')}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-white/40 hover:text-white transition-colors duration-300"
+                                        >
+                                            <Instagram size={18} />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </FadeIn>
+                    ))}
                 </div>
             </Section>
 
