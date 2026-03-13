@@ -132,7 +132,7 @@ export const UGC_CREATORS: Creator[] = [
     specialties: ['Lifestyle', 'Comunicação', 'Estética'],
     imageUrl: '/ugc/eduarda.jpg',
     bio: 'Extrovertida e comunicativa, Maria Eduarda traz autenticidade de Belo Horizonte para criar conexões reais e conteúdos que transbordam conhecimento.',
-    instagram: '@ugc.eduardarn',
+    instagram: '@ugceduardarn',
   },
   {
     id: '2',
