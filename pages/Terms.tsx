@@ -1,6 +1,7 @@
 import React from 'react';
 import { Section } from '../components/ui/Section';
 import { FadeIn } from '../components/ui/FadeIn';
+import { SectionCTA } from '../components/ui/SectionCTA';
 
 export const Terms: React.FC = () => {
     return (
@@ -68,6 +69,12 @@ export const Terms: React.FC = () => {
                         </section>
                     </FadeIn>
                 </div>
+                <SectionCTA 
+                  title="Ainda tem dúvidas sobre nossos termos?" 
+                  buttonText="Fale com nosso suporte" 
+                  to="/contact" 
+                  variant="primary"
+                />
             </Section>
         </div>
     );

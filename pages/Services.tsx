@@ -4,6 +4,7 @@ import { FadeIn } from '../components/ui/FadeIn';
 import { SERVICES } from '../constants';
 import { Button } from '../components/ui/Button';
 import { CheckCircle2 } from 'lucide-react';
+import { SectionCTA } from '../components/ui/SectionCTA';
 
 export const ServicesPage: React.FC = () => {
   return (
@@ -63,6 +64,12 @@ export const ServicesPage: React.FC = () => {
             </FadeIn>
           ))}
         </div>
+        <SectionCTA 
+          title="Qual dessas soluções é a ideal para você?" 
+          buttonText="Descobrir agora" 
+          to="/contact" 
+          variant="primary"
+        />
       </Section>
     </div>
   );

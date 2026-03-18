@@ -3,6 +3,7 @@ import { Section } from '../components/ui/Section';
 import { FadeIn } from '../components/ui/FadeIn';
 import { Button } from '../components/ui/Button';
 import { MessageCircle, Zap, Star, Users, Camera, Layout, TrendingUp } from 'lucide-react';
+import { SectionCTA } from '../components/ui/SectionCTA';
 
 export const About: React.FC = () => {
   return (
@@ -66,6 +67,12 @@ export const About: React.FC = () => {
             </div>
           </FadeIn>
         </div>
+        <SectionCTA 
+          title="Quer bater um papo com o Pedro?" 
+          buttonText="Chamar no WhatsApp" 
+          to="/contact" 
+          variant="secondary"
+        />
       </Section>
 
       {/* Expertise Timeline */}
@@ -96,6 +103,12 @@ export const About: React.FC = () => {
             ))}
           </div>
         </div>
+        <SectionCTA 
+          title="Pronto para transformar sua performance?" 
+          buttonText="Bora conversar" 
+          to="/contact" 
+          variant="primary"
+        />
       </Section>
 
       {/* Philosophy Section */}
@@ -114,6 +127,11 @@ export const About: React.FC = () => {
             <p className="text-lg opacity-60">
               Buscamos um valor que caiba no seu bolso, mas com uma entrega que supere todas as suas expectativas.
             </p>
+            <div className="mt-12 flex justify-center">
+              <Button to="/contact" variant="primary" className="bg-brand-black text-white hover:bg-brand-black/90 !rounded-full px-12 py-4">
+                Quero esse valor no meu negócio
+              </Button>
+            </div>
           </FadeIn>
         </div>
       </Section>
@@ -143,6 +161,12 @@ export const About: React.FC = () => {
             </div>
           </div>
         </div>
+        <SectionCTA 
+          title="Faça parte do nosso sucesso." 
+          buttonText="Solicitar Proposta" 
+          to="/contact" 
+          variant="secondary"
+        />
       </Section>
 
       {/* CTA */}

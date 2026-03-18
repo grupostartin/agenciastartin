@@ -212,7 +212,7 @@ _Enviado via site agenciastartin.com_`;
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full bg-black border border-white/10 rounded p-3 text-white focus:border-white focus:outline-none transition-colors"
-                      placeholder="(31) 98278-1618"
+                      placeholder="(99) 99999-9999"
                     />
                   </div>
                 </div>

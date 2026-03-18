@@ -4,6 +4,7 @@ import { FadeIn } from '../components/ui/FadeIn';
 import { CASE_STUDIES } from '../constants';
 import { Button } from '../components/ui/Button';
 import { TrendingUp, Users, MousePointer2, Calendar, ShieldCheck, Zap, ArrowUpRight } from 'lucide-react';
+import { SectionCTA } from '../components/ui/SectionCTA';
 
 export const Cases: React.FC = () => {
   const getIcon = (label: string) => {
@@ -91,6 +92,12 @@ export const Cases: React.FC = () => {
             </FadeIn>
           ))}
         </div>
+        <SectionCTA 
+          title="Impressionado com os resultados?" 
+          buttonText="Agendar minha mentoria" 
+          to="/contact" 
+          variant="secondary"
+        />
 
         {/* Premium CTA */}
         <FadeIn delay={300} className="mt-32">

@@ -5,6 +5,7 @@ import { Button } from '../components/ui/Button';
 import { FadeIn } from '../components/ui/FadeIn';
 import { SERVICES, PROCESS_STEPS, CASE_STUDIES, TESTIMONIALS } from '../constants';
 import { Link } from 'react-router-dom';
+import { SectionCTA } from '../components/ui/SectionCTA';
 import NeuralBackground from '../components/ui/flow-field-background';
 
 export const Home: React.FC = () => {
@@ -82,6 +83,12 @@ export const Home: React.FC = () => {
             </FadeIn>
           ))}
         </div>
+        <SectionCTA 
+          title="Precisa de uma dessas soluções?" 
+          buttonText="Quero decolar agora" 
+          to="/contact" 
+          variant="secondary"
+        />
       </Section>
 
       {/* Process Section */}
@@ -109,6 +116,13 @@ export const Home: React.FC = () => {
             ))}
           </div>
         </div>
+
+        <SectionCTA 
+          title="Quer ver como seu projeto se encaixa aqui?" 
+          buttonText="Agendar Diagnóstico Grátis" 
+          to="/contact" 
+          variant="primary"
+        />
       </Section>
 
       {/* Cases Preview */}
@@ -150,6 +164,12 @@ export const Home: React.FC = () => {
         <div className="mt-8 md:hidden text-center">
           <Button to="/cases" variant="secondary" fullWidth>Ver todos os cases</Button>
         </div>
+        <SectionCTA 
+          title="Sua marca pode ser o próximo case de sucesso." 
+          buttonText="Começar meu projeto" 
+          to="/contact" 
+          variant="secondary"
+        />
       </Section>
 
       {/* CTA Section */}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Section } from '../components/ui/Section';
 import { FadeIn } from '../components/ui/FadeIn';
+import { SectionCTA } from '../components/ui/SectionCTA';
 
 export const Privacy: React.FC = () => {
     return (
@@ -77,6 +78,12 @@ export const Privacy: React.FC = () => {
                         </section>
                     </FadeIn>
                 </div>
+                <SectionCTA 
+                  title="Sua privacidade é nossa prioridade." 
+                  buttonText="Fale Conosco" 
+                  to="/contact" 
+                  variant="primary"
+                />
             </Section>
         </div>
     );

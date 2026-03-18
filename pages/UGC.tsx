@@ -4,6 +4,7 @@ import { FadeIn } from '../components/ui/FadeIn';
 import { Button } from '../components/ui/Button';
 import { UGC_CREATORS } from '../constants';
 import { CheckCircle2, TrendingUp, ShieldCheck, Users, Instagram, Music2 } from 'lucide-react';
+import { SectionCTA } from '../components/ui/SectionCTA';
 // import { Carousel, TestimonialCard } from '../components/ui/retro-testimonial';
 
 export const UGCPage: React.FC = () => {
@@ -86,6 +87,12 @@ export const UGCPage: React.FC = () => {
                         </FadeIn>
                     ))}
                 </div>
+                <SectionCTA 
+                  title="Convencido do poder do UGC?" 
+                  buttonText="Solicitar Orçamento" 
+                  to="/contact?service=UGC" 
+                  variant="primary" 
+                />
             </Section>
 
             {/* Creators Portfolio */}
@@ -146,6 +153,12 @@ export const UGCPage: React.FC = () => {
                         </FadeIn>
                     ))}
                 </div>
+                <SectionCTA 
+                  title="Gostou do nosso elenco?" 
+                  buttonText="Ver disponibilidade" 
+                  to="/contact?service=UGC" 
+                  variant="secondary"
+                />
             </Section>
 
             {/* Metrics Section */}
@@ -172,6 +185,12 @@ export const UGCPage: React.FC = () => {
                         <div className="text-xl text-gray-400 uppercase tracking-widest font-semibold">ROI Médio em Ads</div>
                     </FadeIn>
                 </div>
+                <SectionCTA 
+                  title="Quer esses números no seu negócio?" 
+                  buttonText="Iniciar Campanha" 
+                  to="/contact?service=UGC" 
+                  variant="primary"
+                />
             </Section>
 
             {/* CTA */}
