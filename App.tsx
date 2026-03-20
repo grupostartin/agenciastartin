@@ -13,11 +13,26 @@ import { Terms } from './pages/Terms';
 import { UGCPage } from './pages/UGC';
 import { SplashScreen } from './components/ui/SplashScreen';
 
-// Scroll to top wrapper
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
+
+// Scroll to top & GA tracker wrapper
 const ScrollToTop = () => {
   const { pathname } = useLocation();
   React.useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Explicitly track page views for Single Page App (SPAs) 
+    // especially because we are using HashRouter
+    if (typeof window.gtag === 'function') {
+      window.gtag('config', 'G-74FB073MCV', {
+        page_path: pathname,
+      });
+      console.log(`GA: Page viewed - ${pathname}`);
+    }
   }, [pathname]);
   return null;
 };

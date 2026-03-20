@@ -71,23 +71,25 @@ _Enviado via site agenciastartin.com_`;
     const btn = document.getElementById('submit-btn') as HTMLButtonElement;
     if (btn) btn.innerHTML = 'Redirecionando...';
 
-    // Open WhatsApp in a new tab
-    window.open(whatsappUrl, '_blank');
+    // Fire Google Ads conversion event; open WhatsApp inside the callback
+    // (with a 2000ms timeout fallback) so the pixel fires before navigation.
+    const openWhatsApp = () => {
+      window.open(whatsappUrl, '_blank');
+      setTimeout(() => {
+        setIsSubmitted(true);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 500);
+    };
 
-    // Google Analytics Lead Event
     if (typeof window.gtag === 'function') {
-      window.gtag('event', 'generate_lead', {
-        'event_category': 'Contact',
-        'event_label': 'WhatsApp Lead Form',
-        'value': 1
+      window.gtag('event', 'conversion_event_submit_lead_form', {
+        'event_callback': openWhatsApp,
+        'event_timeout': 2000,
       });
+    } else {
+      // gtag not available, navigate directly
+      openWhatsApp();
     }
-
-    // Show success state in the UI
-    setTimeout(() => {
-      setIsSubmitted(true);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 1000);
   };
 
   if (isSubmitted) {
