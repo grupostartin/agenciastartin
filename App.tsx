@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { ThemeProvider } from 'next-themes';
 import { Header } from './components/Layout/Header';
 import { Footer } from './components/Layout/Footer';
@@ -11,6 +11,7 @@ import { About } from './pages/About';
 import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
 import { UGCPage } from './pages/UGC';
+import { LeadsLandingPage } from './pages/LeadsLandingPage';
 import { SplashScreen } from './components/ui/SplashScreen';
 
 declare global {
@@ -56,6 +57,7 @@ const App: React.FC = () => {
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/ugc" element={<UGCPage />} />
+              <Route path="/leadslandingpage" element={<LeadsLandingPage />} />
             </Routes>
           </main>
           <Footer />

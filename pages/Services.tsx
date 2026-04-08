@@ -24,10 +24,21 @@ export const ServicesPage: React.FC = () => {
             <FadeIn key={service.id} delay={index * 100}>
               <div className={`flex flex-col md:flex-row gap-12 items-center ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
                 <div className="flex-1 w-full">
-                  <div className="bg-brand-gray p-6 sm:p-8 md:p-12 rounded-2xl border border-white/5 h-full flex items-center justify-center aspect-video md:aspect-auto min-h-[200px] md:min-h-[300px]">
-                    <div className="transform scale-125 md:scale-150 text-white/20">
-                      {service.icon}
-                    </div>
+                  <div className="relative group overflow-hidden rounded-2xl border border-white/5 aspect-video md:aspect-[4/3] lg:aspect-video">
+                    {service.imageUrl ? (
+                      <img 
+                        src={service.imageUrl} 
+                        alt={service.title} 
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                    ) : (
+                      <div className="bg-brand-gray p-6 sm:p-8 md:p-12 h-full flex items-center justify-center">
+                        <div className="transform scale-125 md:scale-150 text-white/20">
+                          {service.icon}
+                        </div>
+                      </div>
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                 </div>
                 <div className="flex-1 space-y-6">

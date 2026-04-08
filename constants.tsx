@@ -15,30 +15,34 @@ export const SERVICES: ServiceItem[] = [
   {
     id: 'videomaker',
     title: 'Videomaker Mobile para Eventos',
-    description: 'Cobertura profissional de eventos corporativos e sociais em BH com agilidade.',
+    description: 'Cobertura profissional de eventos corporativos e sociais com agilidade.',
     icon: <Smartphone className="w-8 h-8" />,
-    deliverables: ['Reels e Stories', 'Highlights do evento', 'Material institucional', 'Entrega rápida']
+    deliverables: ['Reels e Stories', 'Highlights do evento', 'Material institucional', 'Entrega rápida'],
+    imageUrl: '/services/videomaker.png'
   },
   {
     id: 'sites',
     title: 'Sites e Landing Pages',
     description: 'Desenvolvimento focado em performance, SEO e alta conversão de visitantes.',
     icon: <Monitor className="w-8 h-8" />,
-    deliverables: ['Design responsivo', 'Otimização SEO', 'Alta performance', 'Foco em conversão']
+    deliverables: ['Design responsivo', 'Otimização SEO', 'Alta performance', 'Foco em conversão'],
+    imageUrl: '/services/sites.png'
   },
   {
     id: 'trafego',
     title: 'Gestão de Tráfego Pago',
     description: 'Campanhas estratégicas em Meta Ads e Google Ads para escalar seu negócio.',
     icon: <BarChart3 className="w-8 h-8" />,
-    deliverables: ['Estratégia personalizada', 'Gestão de anúncios', 'Relatórios mensais', 'Otimização de ROI']
+    deliverables: ['Estratégia personalizada', 'Gestão de anúncios', 'Relatórios mensais', 'Otimização de ROI'],
+    imageUrl: '/services/trafego.png'
   },
   {
     id: 'ugc',
     title: 'Agenciamento de UGC\'s',
     description: 'Conectamos sua marca a criadores de conteúdo para gerar anúncios autênticos e provas sociais.',
     icon: <Video className="w-8 h-8" />,
-    deliverables: ['Curadoria de criadores', 'Gestão de campanhas', 'Edição de conteúdo', 'Estratégia de criativos']
+    deliverables: ['Curadoria de criadores', 'Gestão de campanhas', 'Edição de conteúdo', 'Estratégia de criativos'],
+    imageUrl: '/services/ugc.png'
   }
 ];
 

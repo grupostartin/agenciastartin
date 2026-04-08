@@ -1,18 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 import { DottedSurface } from './dotted-surface';
 import { cn } from '@/lib/utils';
 
 export const SplashScreen: React.FC = () => {
+    const location = useLocation();
     const [isVisible, setIsVisible] = useState(true);
 
+    const isLeadsPage = location.pathname === '/leadslandingpage';
+
     useEffect(() => {
+        if (isLeadsPage) {
+            setIsVisible(false);
+            return;
+        }
         const timer = setTimeout(() => {
             setIsVisible(false);
         }, 3500); // 3.5 seconds
 
         return () => clearTimeout(timer);
-    }, []);
+    }, [isLeadsPage]);
+
+    if (isLeadsPage) return null;
 
     return (
         <AnimatePresence>

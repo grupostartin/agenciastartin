@@ -6,6 +6,7 @@ export interface ServiceItem {
   description: string;
   icon: React.ReactNode;
   deliverables: string[];
+  imageUrl?: string;
 }
 
 export interface Project {
