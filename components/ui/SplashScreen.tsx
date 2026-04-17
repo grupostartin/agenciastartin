@@ -8,10 +8,10 @@ export const SplashScreen: React.FC = () => {
     const location = useLocation();
     const [isVisible, setIsVisible] = useState(true);
 
-    const isLeadsPage = location.pathname === '/leadslandingpage';
+    const isSpecialPage = location.pathname === '/leadslandingpage' || location.pathname === '/cursonetworking';
 
     useEffect(() => {
-        if (isLeadsPage) {
+        if (isSpecialPage) {
             setIsVisible(false);
             return;
         }
@@ -20,9 +20,9 @@ export const SplashScreen: React.FC = () => {
         }, 3500); // 3.5 seconds
 
         return () => clearTimeout(timer);
-    }, [isLeadsPage]);
+    }, [isSpecialPage]);
 
-    if (isLeadsPage) return null;
+    if (isSpecialPage) return null;
 
     return (
         <AnimatePresence>

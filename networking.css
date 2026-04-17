@@ -1,0 +1,91 @@
+/* networking.css - Specific styles for the Networking page */
+
+.networking-page {
+  --color-surface: #111415;
+  --color-surface-container-low: #191c1d;
+  --color-surface-container: #1d2021;
+  --color-surface-container-high: #282a2b;
+  --color-surface-container-highest: #323536;
+  
+  --color-primary: #ffb2b7;
+  --color-primary-container: #41000e;
+  --color-on-primary-container: #eb4762;
+  
+  --color-tertiary: #ffb955;
+  --color-on-surface: #e1e3e4;
+  --color-on-surface-variant: #c8c5cd;
+  
+  --color-outline: #929097;
+  --color-outline-variant: #47464c;
+  
+  --color-success: #b2ffcc;
+  --color-success-container: #00391c;
+  --color-on-success-container: #47eb86;
+
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+.networking-page h1, 
+.networking-page h2, 
+.networking-page h3, 
+.networking-page h4, 
+.networking-page h5, 
+.networking-page h6 {
+  letter-spacing: -0.02em;
+}
+
+/* Custom Utilities scoped to .networking-page */
+.networking-page .bg-surface { background-color: var(--color-surface); }
+.networking-page .bg-surface-container-low { background-color: var(--color-surface-container-low); }
+.networking-page .bg-surface-container { background-color: var(--color-surface-container); }
+.networking-page .bg-primary { background-color: var(--color-primary); }
+.networking-page .bg-primary-container { background-color: var(--color-primary-container); }
+.networking-page .bg-tertiary { background-color: var(--color-tertiary); }
+
+.networking-page .text-on-surface { color: var(--color-on-surface); }
+.networking-page .text-on-surface-variant { color: var(--color-on-surface-variant); }
+.networking-page .text-primary { color: var(--color-primary); }
+.networking-page .text-primary-container { color: var(--color-primary-container); }
+.networking-page .text-tertiary { color: var(--color-tertiary); }
+
+.networking-page .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  transition: all 0.3s;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-container) 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.networking-page .btn-primary:hover {
+  box-shadow: 0 0 40px rgba(255, 178, 183, 0.2);
+  transform: translateY(-2px);
+}
+
+.networking-page .glass-card {
+  background-color: rgba(17, 20, 21, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.networking-page .text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(135deg, var(--color-primary) 0%, var(--color-tertiary) 100%);
+}
+
+.networking-page .border-primary\/20 {
+  border-color: rgba(255, 178, 183, 0.2);
+}

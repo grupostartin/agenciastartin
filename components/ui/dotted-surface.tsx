@@ -60,10 +60,17 @@ export function DottedSurface({ className, children, ...props }: DottedSurfacePr
         camera.position.set(0, 120, 550);
         camera.lookAt(new THREE.Vector3(0, -100, 0));
 
-        const renderer = new THREE.WebGLRenderer({
-            antialias: true,
-            alpha: false,
-        });
+        let renderer: THREE.WebGLRenderer;
+        try {
+            renderer = new THREE.WebGLRenderer({
+                antialias: true,
+                alpha: false,
+            });
+        } catch (error) {
+            console.error('Failed to create WebGL context:', error);
+            return;
+        }
+        
         renderer.setPixelRatio(window.devicePixelRatio);
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.setClearColor(0x000000, 1);

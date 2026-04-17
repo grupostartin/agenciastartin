@@ -37,13 +37,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
               sans: ['Inter', 'sans-serif'],
+              headline: ['Plus Jakarta Sans', 'sans-serif'],
             },
             colors: {
               brand: {
@@ -52,7 +53,15 @@
                 gray: '#1a1a1a',
                 'gray-light': '#333333',
                 'gray-text': '#888888'
-              }
+              },
+              surface: '#111415',
+              'surface-container': '#1d2021',
+              'surface-container-low': '#191c1d',
+              primary: '#ffb2b7',
+              'primary-container': '#41000e',
+              tertiary: '#ffb955',
+              'on-surface': '#e1e3e4',
+              'on-surface-variant': '#c8c5cd'
             }
           }
         }
@@ -271,6 +280,42 @@
         .menu-content {
             max-width: 100%;
         }
+      }
+
+      /* Networking Utilities */
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        font-weight: 700;
+        letter-spacing: 0.025em;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        background: linear-gradient(135deg, #ffb2b7 0%, #41000e 100%);
+        color: white;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .btn-primary:hover {
+        box-shadow: 0 0 40px rgba(255, 178, 183, 0.2);
+        transform: translateY(-2px);
+      }
+
+      .glass-card {
+        background: rgba(17, 20, 21, 0.7);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .text-gradient {
+        background: linear-gradient(135deg, #ffb2b7 0%, #ffb955 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
     </style>
   <script type="importmap">

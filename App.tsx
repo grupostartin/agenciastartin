@@ -12,6 +12,7 @@ import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
 import { UGCPage } from './pages/UGC';
 import { LeadsLandingPage } from './pages/LeadsLandingPage';
+import { NetworkingPage } from './pages/NetworkingPage';
 import { SplashScreen } from './components/ui/SplashScreen';
 
 declare global {
@@ -26,8 +27,6 @@ const ScrollToTop = () => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
     
-    // Explicitly track page views for Single Page App (SPAs) 
-    // especially because we are using HashRouter
     if (typeof window.gtag === 'function') {
       window.gtag('config', 'G-74FB073MCV', {
         page_path: pathname,
@@ -45,25 +44,35 @@ const App: React.FC = () => {
       <Router>
         <SplashScreen />
         <ScrollToTop />
-        <div className="flex flex-col min-h-screen bg-black text-white font-sans selection:bg-white selection:text-black overflow-x-hidden">
-          <Header />
-          <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/cases" element={<Cases />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="/ugc" element={<UGCPage />} />
-              <Route path="/leadslandingpage" element={<LeadsLandingPage />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
+        <AppRoutes />
       </Router>
     </ThemeProvider>
+  );
+};
+
+const AppRoutes = () => {
+  const { pathname } = useLocation();
+  const isNetworkingPage = pathname === '/cursonetworking';
+
+  return (
+    <div className="flex flex-col min-h-screen bg-black text-white font-sans selection:bg-white selection:text-black overflow-x-hidden">
+      {!isNetworkingPage && <Header />}
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cases" element={<Cases />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/ugc" element={<UGCPage />} />
+          <Route path="/leadslandingpage" element={<LeadsLandingPage />} />
+          <Route path="/cursonetworking" element={<NetworkingPage />} />
+        </Routes>
+      </main>
+      {!isNetworkingPage && <Footer />}
+    </div>
   );
 };
 
