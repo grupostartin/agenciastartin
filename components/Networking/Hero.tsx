@@ -69,7 +69,7 @@ export default function Hero() {
             <div className="absolute -inset-4 bg-primary/20 blur-[100px] rounded-full opacity-50" />
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 aspect-[4/5]">
               <img
-                src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2071&auto=format&fit=crop"
+                src="/pedroceo.jpg"
                 alt="Professional Networking"
                 className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
               />

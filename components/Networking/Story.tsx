@@ -44,7 +44,7 @@ export default function Story() {
             <div className="absolute -inset-10 bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
             <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl aspect-[3/4]">
               <img 
-                src="https://images.unsplash.com/photo-1544717297-fa95b35c76d5?q=80&w=2040&auto=format&fit=crop" 
+                src="/pedroceo.jpg" 
                 alt="Pedro Augusto - Autor" 
                 className="w-full h-full object-cover grayscale-[30%]"
               />
