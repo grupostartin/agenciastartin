@@ -9,7 +9,7 @@ const DURATION = 15 * 60;
 const bonuses = [
   {
     icon: <MessageCircle className="w-7 h-7 text-primary" />,
-    title: "Scripts de Abordagem Anti-Tímido™",
+    title: "Scripts de Abordagem Anti-Tímido",
     desc: "Mensagens prontas para DM, e-mail e abordagem presencial com estrutura: gancho + contexto + valor + CTA. Copie, adapte e envie.",
     value: "R$ 97"
   },

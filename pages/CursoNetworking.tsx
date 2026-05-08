@@ -20,7 +20,7 @@ export function CursoNetworkingPage() {
   return (
     <div className="min-h-screen font-sans overflow-x-hidden" style={{ background: '#111415', color: '#e1e3e4' }}>
       {/* SEO */}
-      <title>O Método Anti-Tímido™ | Curso de Networking de Alto Valor</title>
+      <title>O Método Anti-Tímido | Curso de Networking de Alto Valor</title>
 
       {/* Floating urgency timer bar */}
       <FloatingTimer />
@@ -48,7 +48,7 @@ export function CursoNetworkingPage() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12 text-center md:text-left">
             <div>
               <div className="text-xl font-black text-white" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                O Método Anti-Tímido™
+                O Método Anti-Tímido
               </div>
               <p className="text-xs mt-1 font-medium" style={{ color: '#c8c5cd' }}>
                 Do Zero aos Grandes Players

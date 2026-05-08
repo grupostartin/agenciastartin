@@ -38,7 +38,7 @@ export default function Method() {
             <Zap className="w-4 h-4 text-primary" />
             <span className="text-primary font-bold tracking-widest uppercase text-xs">A Estrutura da Transformação</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">O Método Anti-Tímido™</h2>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">O Método Anti-Tímido</h2>
           <p className="text-xl text-on-surface-variant max-w-3xl mx-auto leading-relaxed">
             Uma abordagem que funciona <span className="text-white italic">exatamente porque ignora o carisma forçado</span> e transforma sua introversão em sua maior vantagem competitiva.
           </p>
