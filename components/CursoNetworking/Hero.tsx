@@ -21,7 +21,7 @@ export default function Hero() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-sm">
               <Sparkles className="w-4 h-4 text-tertiary" />
               <span className="text-tertiary font-bold tracking-[0.1em] uppercase text-[10px] md:text-xs">
-                Curso · Do Zero aos Grandes Players
+                Ebook · Do Zero aos Grandes Players
               </span>
             </div>
 

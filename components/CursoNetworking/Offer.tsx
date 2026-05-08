@@ -44,7 +44,7 @@ export default function Offer() {
           >
             <h3 className="text-2xl font-bold mb-6 md:mb-10 text-white flex items-center gap-4">
               <BookOpen className="w-8 h-8 text-primary" />
-              Os 10 Módulos do Treinamento
+              Os 10 Capítulos do Ebook
             </h3>
             <div className="grid sm:grid-cols-2 gap-4">
               {modules.map((mod, i) => (
@@ -62,7 +62,7 @@ export default function Offer() {
                   <Laptop className="w-6 h-6 text-tertiary shrink-0 mt-1" />
                   <div>
                     <p className="text-white font-bold mb-1">Área de Membros</p>
-                    <p className="text-sm text-on-surface-variant font-medium">Plataforma exclusiva para assistir às aulas e baixar os materiais.</p>
+                    <p className="text-sm text-on-surface-variant font-medium">Plataforma exclusiva para acessar o ebook e baixar os materiais.</p>
                   </div>
                 </div>
               </div>
@@ -82,7 +82,7 @@ export default function Offer() {
                 <ShieldCheck className="w-6 h-6 text-primary shrink-0" />
                 <div>
                   <p className="text-white font-bold mb-1">Acesso Vitalício</p>
-                  <p className="text-sm text-on-surface-variant font-medium">Acesse quando e onde quiser, com todas as atualizações futuras inclusas gratuitamente.</p>
+                  <p className="text-sm text-on-surface-variant font-medium">Leia quando e onde quiser, com todas as atualizações futuras inclusas gratuitamente.</p>
                 </div>
               </div>
             </div>
@@ -140,7 +140,7 @@ export default function Offer() {
             <div className="space-y-4 md:space-y-5 mb-10 md:mb-12">
               {[
                 "Acesso Imediato à Plataforma",
-                "10 Módulos Completos em Vídeo",
+                "10 Capítulos Completos em Ebook",
                 "Materiais, Scripts e Exercícios",
                 "Acesso Vitalício ao Conteúdo",
                 "Todos os Bônus de Aceleração",
