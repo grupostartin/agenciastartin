@@ -139,7 +139,7 @@ export default function Offer() {
 
             <div className="space-y-4 md:space-y-5 mb-10 md:mb-12">
               {[
-                "Acesso Imediato à Plataforma",
+                "Acesso Imediato à Plataforma do Curso",
                 "10 Capítulos Completos em Ebook",
                 "Materiais, Scripts e Exercícios",
                 "Acesso Vitalício ao Conteúdo",
