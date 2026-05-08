@@ -12,7 +12,8 @@ import { Privacy } from './pages/Privacy';
 import { Terms } from './pages/Terms';
 import { UGCPage } from './pages/UGC';
 import { LeadsLandingPage } from './pages/LeadsLandingPage';
-import { NetworkingPage } from './pages/NetworkingPage';
+import { CursoNetworkingPage } from './pages/CursoNetworking';
+
 import { SplashScreen } from './components/ui/SplashScreen';
 
 declare global {
@@ -52,11 +53,11 @@ const App: React.FC = () => {
 
 const AppRoutes = () => {
   const { pathname } = useLocation();
-  const isNetworkingPage = pathname === '/cursonetworking';
+  const isLandingPage = pathname === '/cursonetworking';
 
   return (
     <div className="flex flex-col min-h-screen bg-black text-white font-sans selection:bg-white selection:text-black overflow-x-hidden">
-      {!isNetworkingPage && <Header />}
+      {!isLandingPage && <Header />}
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -68,10 +69,10 @@ const AppRoutes = () => {
           <Route path="/terms" element={<Terms />} />
           <Route path="/ugc" element={<UGCPage />} />
           <Route path="/leadslandingpage" element={<LeadsLandingPage />} />
-          <Route path="/cursonetworking" element={<NetworkingPage />} />
+          <Route path="/cursonetworking" element={<CursoNetworkingPage />} />
         </Routes>
       </main>
-      {!isNetworkingPage && <Footer />}
+      {!isLandingPage && <Footer />}
     </div>
   );
 };

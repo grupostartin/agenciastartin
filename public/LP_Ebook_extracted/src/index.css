@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Plus Jakarta Sans", sans-serif;
+  
+  --color-surface: #111415;
+  --color-surface-container-low: #191c1d;
+  --color-surface-container: #1d2021;
+  --color-surface-container-high: #282a2b;
+  --color-surface-container-highest: #323536;
+  
+  --color-primary: #ffb2b7;
+  --color-primary-container: #41000e;
+  --color-on-primary-container: #eb4762;
+  
+  --color-tertiary: #ffb955;
+  --color-on-surface: #e1e3e4;
+  --color-on-surface-variant: #c8c5cd;
+  
+  --color-outline: #929097;
+  --color-outline-variant: #47464c;
+  
+  --color-success: #b2ffcc;
+  --color-success-container: #00391c;
+  --color-on-success-container: #47eb86;
+  
+  --radius-xl: 2rem;
+  --radius-2xl: 3rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-on-surface);
+    background-color: var(--color-surface);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headline);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-2xl font-bold tracking-wide transition-all duration-300;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-container) 100%);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 0 40px rgba(255, 178, 183, 0.2);
+    transform: translateY(-2px);
+  }
+
+  .glass-card {
+    @apply bg-surface/70 backdrop-blur-xl border border-white/5;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, var(--color-primary) 0%, var(--color-tertiary) 100%);
+  }
+}

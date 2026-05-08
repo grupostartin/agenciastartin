@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>O Método Anti-Tímido - Construa um Networking de Alto Valor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed-variant": "#633f00",
+                        "surface-bright": "#373a3b",
+                        "outline-variant": "#47464c",
+                        "surface-tint": "#ffb2b7",
+                        "on-secondary-fixed": "#1a1a2e",
+                        "surface-container-low": "#191c1d",
+                        "tertiary": "#ffb955",
+                        "secondary-container": "#47475d",
+                        "secondary-fixed-dim": "#c6c4df",
+                        "tertiary-container": "#2a1800",
+                        "on-primary": "#67001c",
+                        "on-error-container": "#ffdad6",
+                        "on-background": "#e1e3e4",
+                        "inverse-surface": "#e1e3e4",
+                        "on-primary-fixed": "#40000e",
+                        "on-secondary-fixed-variant": "#45455b",
+                        "tertiary-fixed": "#ffddb4",
+                        "on-error": "#690005",
+                        "surface-dim": "#111415",
+                        "on-secondary": "#2f2e43",
+                        "on-tertiary-fixed": "#291800",
+                        "surface-container": "#1d2021",
+                        "primary-container": "#41000e",
+                        "surface-container-lowest": "#0c0f10",
+                        "tertiary-fixed-dim": "#ffb955",
+                        "primary-fixed-dim": "#ffb2b7",
+                        "on-primary-container": "#eb4762",
+                        "surface": "#111415",
+                        "surface-container-high": "#282a2b",
+                        "on-surface-variant": "#c8c5cd",
+                        "outline": "#929097",
+                        "inverse-on-surface": "#2e3132",
+                        "on-tertiary-container": "#b57700",
+                        "primary-fixed": "#ffdadb",
+                        "error-container": "#93000a",
+                        "on-primary-fixed-variant": "#91002b",
+                        "on-secondary-container": "#b8b6d0",
+                        "surface-container-highest": "#323536",
+                        "primary": "#ffb2b7",
+                        "on-surface": "#e1e3e4",
+                        "background": "#111415",
+                        "error": "#ffb4ab",
+                        "on-tertiary": "#452b00",
+                        "inverse-primary": "#b71d3f",
+                        "secondary": "#c6c4df",
+                        "secondary-fixed": "#e2e0fc",
+                        "surface-variant": "#323536"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Plus Jakarta Sans", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                        label: ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #111415; color: #e1e3e4; }
+        .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .btn-primary {
+            background: linear-gradient(135deg, #ffb2b7 0%, #41000e 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            box-shadow: 0 0 20px rgba(255, 178, 183, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 bg-[#111415]/70 backdrop-blur-xl">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-tighter text-white font-headline">O Método Anti-Tímido</div>
+<div class="hidden md:flex space-x-8">
+<a class="text-[#FFB2B7] border-b-2 border-[#FFB2B7] pb-1 font-body text-sm hover:text-[#FFB2B7] transition-colors duration-300" href="#metodo">O Método</a>
+<a class="text-[#C8C5CD] font-body text-sm hover:text-[#FFB2B7] transition-colors duration-300" href="#historia">História</a>
+<a class="text-[#C8C5CD] font-body text-sm hover:text-[#FFB2B7] transition-colors duration-300" href="#garantia">Garantia</a>
+<a class="text-[#C8C5CD] font-body text-sm hover:text-[#FFB2B7] transition-colors duration-300" href="#faq">FAQ</a>
+</div>
+<a class="btn-primary text-on-primary-container px-6 py-2 rounded-full font-label font-bold text-sm tracking-wide" href="#checkout">Inscrever-se</a>
+</div>
+</nav>
+<!-- Hero Section -->
+<main class="flex-grow pt-32 pb-24 px-8 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+<div class="lg:w-1/2 space-y-8">
+<h1 class="font-headline font-extrabold text-5xl lg:text-6xl text-white tracking-tight leading-tight">
+                Como Construir um Networking de Alto Valor do Zero - <span class="text-primary">Mesmo Sendo Completamente Tímido</span>
+</h1>
+<p class="font-body text-lg text-on-surface-variant leading-relaxed">
+                Descubra a jornada exata de Pedro Augusto: de uma pessoa paralisada socialmente a dono de uma agência de sucesso, utilizando um método estruturado de conexões.
+            </p>
+<a class="btn-primary inline-flex items-center justify-center px-8 py-4 rounded-xl text-on-primary-container font-label font-bold text-lg tracking-wide w-full sm:w-auto" href="#checkout">
+                Quero Construir Meu Networking Agora <span class="material-symbols-outlined ml-2 text-xl" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="lg:w-1/2 relative">
+<img alt="Professional networking setup" class="rounded-xl w-full h-auto object-cover opacity-90 shadow-2xl" data-alt="modern sophisticated workspace with laptop coffee and notebook soft ambient lighting deep navy tones professional atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN9gheEwtKHjAJhTyGhTz64g6Ifk2bpqMPdkggpVFXHbaCChmyUh-yJQ3tV-Z2PAEAAfCy8Hom_F5AnFgOGSXP6e4KQvIVxj2bZLV1vO214PGLOgOkejTqIhI-t4oNkogg8VOdoGTjs-E-9aV1LtRyc68Y4cQJHPV6oCM6k0F-ak8bjuBIfBEoY3b9bDkoQ8aX59hwExOXUH5FuyLuwizaaJTs-T4TNlBCV3MdSZ5XmafoHuvQEZUOBiZ3vMuIjQ6D2uGgkVzQ5pU"/>
+<div class="absolute inset-0 rounded-xl ring-1 ring-white/10 pointer-events-none"></div>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-[#191C1D] w-full py-12 px-8 mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div class="text-lg font-black text-white font-headline">O Método Anti-Tímido</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-[#C8C5CD] hover:text-white transition-opacity font-body text-sm tracking-wide" href="#">Termos de Uso</a>
+<a class="text-[#C8C5CD] hover:text-white transition-opacity font-body text-sm tracking-wide" href="#">Privacidade</a>
+<a class="text-[#C8C5CD] hover:text-white transition-opacity font-body text-sm tracking-wide" href="#">Suporte</a>
+</div>
+<div class="text-[#C8C5CD] font-body text-sm tracking-wide">
+                © 2024 O Método Anti-Tímido. Todos os direitos reservados.
+            </div>
+</div>
+</footer>
+</body></html>
